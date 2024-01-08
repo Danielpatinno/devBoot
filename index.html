@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:ital,wght@1,200&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/874817aac2.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+
+    <title>DevBot</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+        <div class="logo">
+          <i class="fa-regular fa-message fa-lg"></i>
+          <h1>DevBot</h1>
+        </div>
+
+        <button class="close" onClick="handleCloseChat()" >
+            <i class="fa-solid fa-xmark fa-xl"></i>
+        </button>
+    </header>
+
+    <main>
+        <ul>
+            <li class="message bot">
+                <i class="fa-solid fa-robot fa-xl"></i>
+                <p>Olá, sou o <strong>DevBot.</strong> <br>Como posso te ajudar ?</p>
+            </li>
+        </ul>
+    </main>
+
+    <footer>
+        <textarea 
+          placeholder="Insira uma mensagem..." 
+          rows="1" 
+          required
+          onkeydown="handleChatOnKeyDown(event)"
+          oninput="handleAutoSize()"
+        ></textarea>
+
+        <button class="send-message" onclick="handleChat()">
+            <i class="fa-regular fa-paper-plane fa-xl"></i>
+        </button>
+    </footer>
+  </div>
+
+  <button class="toggler" onclick="handleTogglerChat()">
+    <i class="fa-regular fa-message fa-xl"></i>
+    <i class="fa-solid fa-xmark fa-xl"></i>
+  </button>
+
+</body>
+</html>
